@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../assets/img/portfolio/background.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.element {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    background: url('../assets/img/portfolio/background.jpg') no-repeat center center/cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    user-select: none;
+}
+
+.navigation {
+    display: flex;
+    gap: 20px;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.navigation .btnregister {
+    width: 130px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #08ffd1;
+    outline: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigation .btnregister:hover {
+    background-color: #08ffd1;
+    color: #162938;
+}
+
+.navigation a:hover {
+    color: #08ffd1;
+    border-color: #08ffd1;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: rgb(28, 30, 60);
+    left: 0;
+    bottom: -6px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+    transform-origin: right;
+    border-radius: 5px;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.hamburger {
+    cursor: pointer;
+    font-size: 2em;
+    color: #fff;
+    display: none;
+}
+
+.login {
+    width: 382px;
+    overflow: hidden;
+    margin: auto;
+    padding: 80px;
+    background: #313560;
+    border-radius: 15px;
+}
+
+h2 {
+    text-align: center;
+    color: #277582;
+    padding: 20px;
+}
+
+label {
+    color: #08ffd1;
+    font-size: 17px;
+}
+
+#Uname {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#Pass {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#log {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: blue;
+}
+
+span {
+    color: white;
+    font-size: 17px;
+}
+
+a {
+    float: right;
+    background-color: grey;
+}
+
+.wraper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.wraper .form-box .input-box {
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+    padding-left: 0;
+}
+
+.wraper .form-box .input-box input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    color: #555;
+    font-family: 'poppins', sans-serif;
+}
+
+/* About Me Section */
+#about {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+#about h2 {
+    color: #277582;
+    margin-bottom: 20px;
+}
+
+#about section {
+    margin-bottom: 20px;
+}
+
+#about h3 {
+    color: #08ffd1;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#about p {
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Initially display the login form */
+#login {
+    display: block;
+}

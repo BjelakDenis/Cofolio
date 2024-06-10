@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Portfolio</div>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <button class="btnLogin" onclick="showSection('login')">Login</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-box">
+                    <label for="Uname">Username</label>
+                    <input type="text" id="Uname" required>
+                </div>
+                <div class="input-box">
+                    <label for="Pass">Password</label>
+                    <input type="password" id="Pass" required>
+                </div>
+                <button type="submit" id="log">Login</button>
+            </form>
+            <span>Don't have an account? <a href="registration.html" onclick="showSection('register')">Register</a></span>
+        </div>
+        
+        <div class="form-box forgot" id="forgot" style="display: none;">
+            <h2>Forgot Password</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email" id="forgot-email" required>
+                        <label>Email</label>
+                    </div>
+                    <button type="submit" class="btnSubmit" onclick="forgotPassword()">Reset Password</button>
+                    <div class="login-register">
+                        <p>Remember your password? <a href="#" onclick="showSection('login')">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div id="about" class="section" style="display: none;">
+            <h2>About Me</h2>
+            <section class="introduction">
+                <h3>Introduction</h3>
+                <p>Hello! I am a web developer with a passion for creating beautiful and functional websites. I have experience in various web technologies and enjoy learning new things. In my spare time, I like to read, travel, and explore new places.</p>
+            </section>
+            <section class="mission">
+                <h3>Mission Statement</h3>
+                <p>My mission is to deliver high-quality web solutions that help businesses thrive in the digital world. I value integrity, creativity, and continuous learning.</p>
+            </section>
+            <section class="contact">
+                <h3>Contact Information</h3>
+                <p>Email: example@example.com<br>Phone: +1234567890<br>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile">yourprofile</a></p>
+            </section>
+            <section class="professional-summary">
+                <h3>Professional Summary</h3>
+                <p><strong>Current Position:</strong> Web Developer at Tech Company<br><strong>Experience:</strong> Over 5 years of experience in web development, specializing in front-end development with a strong focus on user experience.</p>
+            </section>
+            <section class="skills">
+                <h3>Skills</h3>
+                <p><strong>Technical Skills:</strong> HTML, CSS, JavaScript, React, Node.js, SQL, Git<br><strong>Soft Skills:</strong> Communication, Teamwork, Problem-solving, Time Management</p>
+            </section>
+        </div>
+
+         <!-- Services Section -->
+         <div id="services" class="section" style="display: none;">
+            <h2>Services</h2>
+            <p>Our services page content.</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="section" style="display: none;">
+            <section class="page-section bg-light" id="team">
+                <div class="container">
+                    <div class="text-center">
+                        <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+                        <h3 class="section-subheading text-muted">Here are our informations</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="team-member">
+                                <img class="mx-auto rounded-circle" src="assets/img/team/Bjelak Denis.png" alt="..." />
+                                <h4>Denis Bjelak</h4>
+                                <p class="text-muted">Software Developer</p>
+                                <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/BjelakDenis" aria-label="Denis Bjelak Twitter Profile"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/deno.bjelak" aria-label="Denis Bjelak Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/denis17053/" aria-label="Denis Bjelak Insta Profile"><i class="fab fa-instagram "></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="team-member">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="team-member">
+                                <img class="mx-auto rounded-circle" src="assets/img/team/Silber Emil.png" alt="..." />
+                                <h4>Emil Silber</h4>
+                                <p class="text-muted">Software Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Please contact us if you have any problems with our website.</p></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src = "js/script.js"></script>
+</body>
+</html>

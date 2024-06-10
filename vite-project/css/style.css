@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');  /*Schriftart von Google Fonts verwenden*/
+
+body {
+    margin: 0;
+    padding: 0; /*Abstand von einem Objekten zu etwas*/
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /*Der Inhalt vom Flex-Container wird vertikal zentriert. Bsp: Home, About, Contact ...*/
+    min-height: 100vh;          /*100vh = 100% of the viewport height*/
+    background: url('../assets/img/portfolio/background.jpg') no-repeat center center/cover; /*cover: Alles abdecken ohne Bild verzerren*/
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.element {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    background: url('../assets/img/portfolio/background.jpg') no-repeat center center/cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.5); /* Make header background semi-transparent */
+}
+
+.logo {
+    color: #fff;
+    font-size: 2em; /* if parent element's font size is 16 pixels, then 2em (Twice as parent element) would make the font size 32 pixels. */
+    font-weight: bold;
+    user-select: none; /* Can't select the text */
+}
+
+.navigation {
+    display: flex;
+    gap: 20px; /* Add space between navigation links */
+}
+
+.navigation a {
+    position: relative; /* normal positioning */
+    font-size: 1.1em;   /* Sets the font size to 1.1 times the size of the parent element's font size. */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;   /* Sets the Thickness to 500, which is typically medium or normal */
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+    border-radius: 5px; /* Add border radius for rounded corners */
+    background-color: transparent; /* Default background color */
+    transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+.navigation .btnLogin {
+    width: 130px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #08ffd1;
+    outline: none;
+    border-radius: 6px;
+    color: #fff; /* Add text color */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigation .btnLogin:hover {
+    background-color: #08ffd1;
+    color: #162938;
+}
+
+.navigation a:hover {
+    color: #08ffd1;
+    border-color: #08ffd1;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: rgb(28, 30, 60);
+    left: 0;
+    bottom: -6px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+    transform-origin: right;
+    border-radius: 5px;
+    transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.hamburger {
+    cursor: pointer;
+    font-size: 2em;
+    color: #fff;
+    display: none;
+}
+
+.login, .register {
+    width: 400px;
+    padding: 40px;
+    background: #313560;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: none;
+}
+
+h2 {
+    text-align: center;
+    color: #277582;
+    padding: 20px;
+}
+
+label {
+    color: #08ffd1;
+    font-size: 17px;
+    display: block;
+    margin: 10px 0;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #08ffd1;
+    color: #313560;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #06cca1;
+}
+
+span {
+    color: white;
+    font-size: 17px;
+}
+
+a {
+    color: #08ffd1;
+    text-decoration: none;
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(58, 123, 213, 0.8), rgba(0, 210, 255, 0.8)), url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23fff" fill-opacity="0.1" fill-rule="evenodd"%3E%3Cpath d="M20 0h20v20H20zM0 20h20v20H0z"/%3E%3C/g%3E%3C/svg%3E');
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;   /*Überlauf versteckt*/
+}
+
+.wrapper .form-box .input-box {
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+    padding-left: 0;
+}
+
+.wrapper .form-box .input-box input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    color: #555;
+    font-family: 'poppins', sans-serif;
+}
+
+/* About Me Section */
+#about {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+#about h2 {
+    color: #277582;
+    margin-bottom: 20px;
+}
+
+#about section {
+    margin-bottom: 20px;
+}
+
+#about h3 {
+    color: #08ffd1;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#about p {
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
