@@ -3,7 +3,7 @@ async function register() {
     const email = document.getElementById('reg-email').value;
     const password = document.getElementById('reg-password').value;
 
-    const response = await fetch('http://localhost:3000/register', {
+    const response = await fetch('http://localhost:5173/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
