@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script> <!-- Verwendung von Font Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-DyZ88mC6Up2uqS5s4ZO6c3AKD7fXriQ1hDA2tw8UM6pR+vxFYDEoXzEn5Dp0Hg8I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-DyZ88mC6Up2uqS5s4ZO6c3AKD7fXriQ1hDA2tw8UM6pR+vxFYDEoXzEn5Dp0Hg8I" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <div class="logo">Portfolio</div>
+        <nav class="navigation">
+            <a href="#" onclick="showSection('home')">Home</a>
+            <a href="#" onclick="showSection('about')">Team</a>
+            <a href="#" onclick="showSection('services')">Services</a>
+            <button class="btnLogin" onclick="showSection('login')">Login</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <!-- Login Section -->
+        <section id="login" class="form-box">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-box">
+                    <label for="Uname">Username</label>
+                    <input type="text" id="Uname" required>
+                </div>
+                <div class="input-box">
+                    <label for="Pass">Password</label>
+                    <input type="password" id="Pass" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <span>Don't have an account? <a href="#" onclick="showSection('register')">Sign Up</a></span>
+            <span>Forgot your password? <a href="#" onclick="showSection('forgot-password')">Reset Password</a></span>
+        </section>
+        
+        <!-- Registration Section -->
+        <section id="register" class="form-box" style="display: none;">
+            <h2>Sign Up</h2>
+            <form id="registerForm">
+                <div class="input-box">
+                    <label for="reg-username">Username</label>
+                    <input type="text" id="reg-username" required>
+                </div>
+                <div class="input-box">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" required>
+                </div>
+                <div class="input-box">
+                    <label for="security-question">Security Question</label>
+                    <input type="text" id="security-question" required>
+                </div>
+                <div class="input-box">
+                    <label for="security-answer">Security Answer</label>
+                    <input type="text" id="security-answer" required>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <span>Already have an account? <a href="#" onclick="showSection('login')">Login</a></span>
+        </section>
+        
+        <!-- Forgot Password Section -->
+        <section id="forgot-password" class="form-box" style="display: none;">
+            <h2>Forgot Password</h2>
+            <form id="resetPasswordForm">
+                <div class="input-box">
+                    <label for="forgot-username">Username</label>
+                    <input type="text" id="forgot-username" required>
+                </div>
+                <div class="input-box">
+                    <label for="forgot-answer">Security Answer</label>
+                    <input type="text" id="forgot-answer" required>
+                </div>
+                <div class="input-box">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" required>
+                </div>
+                <button type="submit">Reset Password</button>
+            </form>
+            <span>Remember your password? <a href="#" onclick="showSection('login')">Login</a></span>
+        </section>
+
+        <!-- Home Section -->
+        <section id="home" class="section" style="display: none;">
+            <h2>Welcome to my Portfolio</h2>
+            <p>This is the home section.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <div id="services" class="section" style="display: none;">
+                <h2>Our Services</h2>
+                <div class="service">
+                    <h3>Web Development</h3>
+                    <p>High-quality web development services using the latest technologies.</p>
+                    <ul>
+                        <li>Front-end Development</li>
+                        <li>Back-end Development</li>
+                        <li>Full-stack Development</li>
+                    </ul>
+                </div>
+                <div class="service">
+                    <h3>Web Design</h3>
+                    <p>Creative and responsive web design that engages users.</p>
+                    <ul>
+                        <li>UI/UX Design</li>
+                        <li>Responsive Design</li>
+                        <li>Prototyping</li>
+                    </ul>
+                </div>
+                <div class="service">
+                    <h3>SEO & Digital Marketing</h3>
+                    <p>Effective SEO and digital marketing strategies to boost your online presence.</p>
+                    <ul>
+                        <li>SEO Optimization</li>
+                        <li>Content Marketing</li>
+                        <li>Social Media Management</li>
+                    </ul>
+                </div>
+                <div class="service">
+                    <h3>Consulting & Training</h3>
+                    <p>Expert consulting and training services to enhance your skills and strategy.</p>
+                    <ul>
+                        <li>Business Strategy</li>
+                        <li>Technical Training</li>
+                        <li>Workshops</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Team Section -->
+        <section id="about" class="page-section bg-light" style="display: none;">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+                    <h3 class="section-subheading text-muted">Here are our informations</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/team/Denis Bjelak.png" alt="Denis Bjelak" />
+                            <h4>Denis Bjelak</h4>
+                            <p class="text-muted">Software Developer</p>
+                            <div class="social-buttons">
+                                <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/BjelakDenis" aria-label="Denis Bjelak Twitter Profile"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="mailto:denisbjelak1@gmail.com" aria-label="Denis Bjelak Gmail Profile"><i class="fas fa-envelope"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/denis17053/" aria-label="Denis Bjelak Instagram Profile"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/team/Emil Silber.png" alt="Emil Silber" />
+                            <h4>Emil Silber</h4>
+                            <p class="text-muted">Software Developer</p>
+                            <div class="social-buttons">
+                                <a class="btn btn-dark btn-social mx-2" href="e.silber@students.htl-leonding.ac.at" aria-label="Emil Silber Mail Profile"><i class="fas fa-envelope"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/emilsilber/" aria-label="Emil Avdic Instagram Profile"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Please contact us if you have any problems with our website.</p></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

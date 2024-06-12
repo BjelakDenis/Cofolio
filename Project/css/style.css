@@ -273,13 +273,13 @@ a {
 .page-section {
     padding: 100px 0; /* Fügt Padding hinzu, um die Sektion geräumiger zu machen */
     width: 100%;
-    display: none;  /* Hide all sections by default */
+    display: none;  /* Versteckt alle Abschnitte standardmäßig */
     position: relative;
     z-index: 1;
 }
 
 .page-section.active {
-    display: block;  /* Show only the active section */
+    display: block;  /* Zeigt nur den aktiven Abschnitt an */
     z-index: 2;
 }
 
@@ -355,4 +355,21 @@ a {
 
 .btn-social:hover {
     background-color: #555;
+}
+
+/* Alle Sektionen außer Login standardmäßig ausblenden */
+.section, .form-box {
+    display: none;
+}
+
+#login {
+    display: block;
+}
+
+.form-box {
+    display: none; /* Versteckt alle Formular-Boxen standardmäßig */
+}
+
+.form-box.active {
+    display: block; /* Zeigt nur die aktive Formular-Box an */
 }
