@@ -27,6 +27,7 @@ Ever wanted to showcase all of your work when looking for commissions or applyin
 - Node.js
 - Express.js
 - Three.js
+- Vite
 
 ## License
 MIT
