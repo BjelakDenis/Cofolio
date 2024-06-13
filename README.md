@@ -8,12 +8,9 @@
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
----
 
 ## Introduction
 Ever wanted to showcase all of your work when looking for commissions or applying for a job? This website has you covered
-
----
 
 ## Features
 - User registration and authentication
@@ -30,12 +27,9 @@ Ever wanted to showcase all of your work when looking for commissions or applyin
 - Node.js
 - Express.js
 - Three.js
----
 
 ## License
 MIT
-
----
 
 ## Contact
 Emil Silber \
