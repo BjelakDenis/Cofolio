@@ -28,7 +28,7 @@ async function register() {
 
     if (response.ok) {
         alert('Registration successful');
-        showSection('login'); // Nach erfolgreicher Registrierung zur Login-Seite wechseln
+        showSection('login');
     } else {
         alert('Registration failed: ' + data.message);
     }
@@ -51,7 +51,7 @@ async function resetPassword() {
 
     if (response.ok) {
         alert('Password reset successful');
-        showSection('login'); // Nach erfolgreicher Passwortzurücksetzung zur Login-Seite wechseln
+        showSection('login');
     } else {
         alert('Password reset failed: ' + data.message);
     }

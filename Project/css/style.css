@@ -284,7 +284,7 @@ a {
 }
 
 .bg-light {
-    background-color: rgba(50, 50, 50, 0.8); /* Dunklerer Hintergrund, um dem allgemeinen Thema zu entsprechen */
+    background-color: rgba(50, 50, 50, 0.8);
 }
 
 .text-center {
@@ -333,13 +333,11 @@ a {
     color: #fff;
 }
 
-/* Sicherstellen, dass die Icons die richtige Schriftfamilie haben */
 .btn-social i {
     font-family: 'Font Awesome 5 Free';
-    font-weight: 900; /* Stellen Sie sicher, dass die Icons im richtigen Gewicht angezeigt werden */
+    font-weight: 900;
 }
 
-/* Stellen Sie sicher, dass die Icons nicht durch eine andere CSS-Eigenschaft verdeckt werden */
 .btn-social {
     font-size: 1.25rem;
     display: inline-block;
