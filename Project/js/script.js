@@ -1,13 +1,33 @@
 function showSection(section) {
     var sections = document.getElementsByClassName('section');
     var formBoxes = document.getElementsByClassName('form-box');
-    var allSections = Array.from(sections).concat(Array.from(formBoxes));
+    var pageSections = document.getElementsByClassName('page-section');
 
-    for (var i = 0; i < allSections.length; i++) {
-        allSections[i].style.display = 'none';
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = 'none';
     }
 
-    document.getElementById(section).style.display = 'block';
+    for (var i = 0; i < formBoxes.length; i++) {
+        formBoxes[i].style.display = 'none';
+    }
+
+    for (var i = 0; i < pageSections.length; i++) {
+        pageSections[i].style.display = 'none';
+    }
+
+    if (section === 'home') {
+        document.getElementById('home').style.display = 'block';
+    } else if (section === 'about') {
+        document.getElementById('team').style.display = 'block';
+    } else if (section === 'services') {
+        document.getElementById('services').style.display = 'block';
+    } else if (section === 'login') {
+        document.getElementById('login').style.display = 'block';
+    } else if (section === 'register') {
+        document.getElementById('register').style.display = 'block';
+    } else if (section === 'forgot-password') {
+        document.getElementById('forgot-password').style.display = 'block';
+    }
 }
 
 async function register() {
@@ -28,7 +48,7 @@ async function register() {
 
     if (response.ok) {
         alert('Registration successful');
-        showSection('login');
+        showSection('login'); // Redirect to the login page after successful registration
     } else {
         alert('Registration failed: ' + data.message);
     }
@@ -67,6 +87,29 @@ document.getElementById('resetPasswordForm').addEventListener('submit', function
     resetPassword();
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    showSection('login');
+
+document.getElementById('loginForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    console.log("Login successful");
+    window.location.href = "index.html#home";
+    //const username = document.getElementById('username').value;
+    //const password = document.getElementById('password').value;
+//
+    //const response = await fetch('http://localhost:3000/login', {
+    //    method: 'POST',
+    //    headers: {
+    //        'Content-Type': 'application/json'
+    //    },
+    //    body: JSON.stringify({ username, password })
+    //});
+//
+    //const data = await response.json();
+//
+    //if (response.ok) {
+    //    alert('Login successful'); 
+    //} else {
+    //    alert('Login failed: ' + data.message);
+    //}
+    localStorage.setItem("loggedIn", "true");
+
 });
