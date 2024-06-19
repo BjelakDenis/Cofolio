@@ -23,6 +23,7 @@ Ever wanted to showcase all of your work when looking for commissions or applyin
 ## Technologies Used
 - HTML5
 - CSS3
+- Tailwind CSS
 - JavaScript (ES6+)
 - Node.js
 - Express.js
