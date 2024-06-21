@@ -187,6 +187,7 @@ a {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Überlauf versteckt */
     padding: 20px; /* Fügt Padding für besseren Abstand hinzu */
+    margin: 7.5em;
 }
 
 .wrapper .form-box {

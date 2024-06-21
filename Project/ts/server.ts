@@ -13,7 +13,7 @@ interface User {
 }
 
 const app = express();
-const port = 5173;
+const port = 5000;
 const ACCESS_TOKEN_SECRET = "your_secret_key";
 
 app.use(bodyParser.json());
